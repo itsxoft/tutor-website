@@ -52,7 +52,7 @@ img {
 .btn {
   display: inline-block;
   padding: 1rem 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   border: 1px solid var(--secondary-color);
   border-radius: 18px;
@@ -416,6 +416,61 @@ img {
   margin-right: 0.5rem;
 }
 
+/* Stats */
+.stats {
+  background: #000 url(../images/stats-background.jpg) center center/cover
+    no-repeat;
+  color: #fff;
+}
+
+.stats-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.stats img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.stats .stats-content {
+  max-width: 500px;
+}
+
+.stats .stats-numbers {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.stats .stats-numbers h3 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.stats .stats-numbers p {
+  font-size: 0.8rem;
+}
+
+.stats .stats-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.stats .btn {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 200px;
+}
+
 /* ================ Media Queries ======================= */
 @media (max-width: 1200px) {
   .hero .hero-flex {
@@ -464,7 +519,8 @@ img {
   }
 
   .details-flex,
-  .details + .details .details-flex {
+  .details + .details .details-flex,
+  .stats .stats-flex {
     flex-direction: column;
     gap: 2rem;
   }
@@ -528,5 +584,9 @@ img {
 
   .summary .container {
     padding: 0;
+  }
+
+  .stats .stats-numbers {
+    flex-direction: column;
   }
 }
